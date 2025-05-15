@@ -13,7 +13,7 @@ void BinaryTree::generate_tree(std::string infix)
 	while (c)
 	{
 		if (is_operator(c)) { 
-			while (not operator_s.empty() && check_priority(c) <= check_priority(operand_s.top()->value))
+			while (not operator_s.empty() && check_priority(c) <= check_priority(operator_s.top()->value))
 			{
 				BinaryNode* opr = operator_s.top();
 				operator_s.pop();

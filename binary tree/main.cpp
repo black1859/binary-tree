@@ -5,11 +5,19 @@
 int main(void) {
 
 	BinaryTree btree;
+	BinaryTree btree2;
 
-	std::string s = "1 + 2 * (3 + 4)";
-	std::cout << s <<"\n";
+	std::string s1 = "((1 + 2) * (3 - 4) + (5 * (6 + 7)))";
+	std::string s2 = "(8 * (9 + 1)) - ((3 - 2) / (5 + 4))";
+	std::string s3 = "(((1 + 2) + (3 + 4)) * (5 + (6 * 7)))";
+	std::string s4 = "(1 + ((2 + 3) * (4 - 5) + (6 / 7)))";
+	std::string s5 = "((1 / (2 + 3)) + ((4 * 5) - (6 + 7)))";
+	
+	std::string target = s1;
 
-	btree.generate_tree(s);
+
+	std::cout << target << "\n";
+	btree.generate_tree(target);
 
 	std::cout << "infix: ";
 	btree.print_infix();
