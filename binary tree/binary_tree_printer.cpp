@@ -28,8 +28,7 @@ void BinaryTree::print_in(BinaryNode* node)
 	if (not is_leaf(node))std::cout << "(";
 	char c = node->value;
 	print_in(node->left);
-	if (is_leaf(node)) std::cout << node->value << "";
-	else std::cout << c << "";
+	std::cout << c << "";
 	print_in(node->right);
 	if (not is_leaf(node))std::cout << ")";
 }
@@ -38,8 +37,7 @@ void BinaryTree::print_pre(BinaryNode* node)
 {
 	if (node == nullptr) return;
 	char c = node->value;
-	if (is_leaf(node)) std::cout << node->value << " ";
-	else std::cout << c << " ";
+	std::cout << c << " ";
 	print_pre(node->left);
 	print_pre(node->right);
 }
@@ -50,8 +48,7 @@ void BinaryTree::print_post(BinaryNode* node)
 	char c = node->value;
 	print_post(node->left);
 	print_post(node->right);
-	if (is_leaf(node)) std::cout << node->value << " ";
-	else std::cout << c << " ";
+	std::cout << c << " ";
 }
 
 void BinaryTree::print_level_order(BinaryNode* node) // queue required
@@ -67,8 +64,7 @@ void BinaryTree::print_level_order(BinaryNode* node) // queue required
 		current = subtree.front();
 
 		char c = current->value;
-		if (is_leaf(current)) std::cout << current->value << " ";
-		else std::cout << c << " ";
+		std::cout << c << " ";
 		
 		if(current->left) subtree.push(current->left);
 		if (current->right) subtree.push(current->right);

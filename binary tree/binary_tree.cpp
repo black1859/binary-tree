@@ -13,6 +13,11 @@ BinaryNode::~BinaryNode()
 	if (right) delete right;
 }
 
+BinaryTree::BinaryTree()
+{
+	this->root = nullptr;
+}
+
 BinaryTree::BinaryTree(int root_value)
 {
 	this->root = new BinaryNode(root_value, nullptr, nullptr);

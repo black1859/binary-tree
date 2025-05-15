@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 class BinaryNode
 {
@@ -16,14 +17,17 @@ private:
 class BinaryTree
 {
 public:
+	BinaryTree();
 	BinaryTree(int root);
 	BinaryTree(BinaryNode* root);
 	~BinaryTree();
+	
+	void generate_tree(std::string infix);
 
 	BinaryNode* get_root();
 
 	void insert_item(int value, int destination);
-
+	
 	void print_infix();
 	void print_prefix();
 	void print_postfix();

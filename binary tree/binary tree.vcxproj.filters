@@ -18,6 +18,9 @@
     <ClInclude Include="binary_tree.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="read_infix.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="binary_tree.cpp">
@@ -27,6 +30,12 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="binary_tree_printer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="read_infix.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="tree_generator.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
