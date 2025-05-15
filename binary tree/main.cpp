@@ -1,17 +1,15 @@
 #include <iostream>
 #include "binary_tree.h"
+#include <string>
 
 int main(void) {
 
-	char c = '*';
-	BinaryTree btree(c);
-	btree.insert_item(2, 2);
+	BinaryTree btree;
 
-	c = '+';
-	btree.insert_item(c, 3);
+	std::string s = "1 + 2 * (3 + 4)";
+	std::cout << s <<"\n";
 
-	btree.insert_item(4, 6);
-	btree.insert_item(5, 7);
+	btree.generate_tree(s);
 
 	std::cout << "infix: ";
 	btree.print_infix();

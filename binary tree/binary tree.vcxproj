@@ -128,11 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="binary_tree.h" />
+    <ClInclude Include="read_infix.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="binary_tree.cpp" />
     <ClCompile Include="binary_tree_printer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="read_infix.cpp" />
+    <ClCompile Include="tree_generator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
