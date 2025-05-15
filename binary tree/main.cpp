@@ -3,16 +3,15 @@
 
 int main(void) {
 
-	// (4 + 5) * 3
-
 	char c = '*';
 	BinaryTree btree(c);
-	c = '+';
-	btree.insert_item(c, 2);
+	btree.insert_item(2, 2);
 
-	btree.insert_item(3, 3);
-	btree.insert_item(4, 4);
-	btree.insert_item(5, 5);
+	c = '+';
+	btree.insert_item(c, 3);
+
+	btree.insert_item(4, 6);
+	btree.insert_item(5, 7);
 
 	std::cout << "infix: ";
 	btree.print_infix();
@@ -22,4 +21,6 @@ int main(void) {
 	std::cout << "\n";
 	std::cout << "postfix: ";
 	btree.print_postfix();
+	std::cout << "\nlevel: ";
+	btree.print_level();
 }

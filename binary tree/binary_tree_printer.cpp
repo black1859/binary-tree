@@ -1,5 +1,7 @@
 #include "binary_tree.h"
 #include <iostream>
+#include <queue>
+
 void BinaryTree::print_infix()
 {
 	print_in(root);
@@ -52,7 +54,24 @@ void BinaryTree::print_post(BinaryNode* node)
 	else std::cout << c << " ";
 }
 
-void BinaryTree::print_level_order(BinaryNode* node)
+void BinaryTree::print_level_order(BinaryNode* node) // queue required
 {
+	std::queue<BinaryNode*> subtree;
+	BinaryNode* current = node;
 
+	if (current == nullptr) return;
+	subtree.push(current);
+
+	while (!subtree.empty())
+	{
+		current = subtree.front();
+
+		char c = current->value;
+		if (is_leaf(current)) std::cout << current->value << " ";
+		else std::cout << c << " ";
+		
+		if(current->left) subtree.push(current->left);
+		if (current->right) subtree.push(current->right);
+		subtree.pop();
+	}
 }
